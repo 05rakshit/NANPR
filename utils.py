@@ -4,17 +4,21 @@ import imutils
 import easyocr
 import mysql.connector
 from mysql.connector import errorcode,connection
+import os
+from urllib.parse import urlparse
 
 
 # Function to connect to the MySQL database
 def connect_to_database():
     try:
+        db_url=os.environ.get("DATABASE_URL")
+        result=urlparse(db_url)
         cnx = connection.MySQLConnection(
-            user='root',
-            password='QHdpjQYeAqWdLwnuIQPcwPwrHBcCwJFY',
-            host='mainline.proxy.rlwy.net',
-            database='railway',
-            port='55270'
+            user=result.username,
+            password=result.password,
+            host=result.hostname,
+            port=result.port,
+            database=result.path[1:]
         )
         return cnx
     except mysql.connector.Error as err:
