@@ -1,7 +1,6 @@
 from PIL import Image, ExifTags
 import cv2
 import numpy as np
-import easyocr
 import mysql.connector
 from mysql.connector import connection
 
