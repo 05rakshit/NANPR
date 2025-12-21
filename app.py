@@ -1,7 +1,7 @@
 import os
 import uuid
 from flask import Flask, jsonify, request, render_template
-from utils import get_owner_details, extract_number_plate
+from utils import get_owner_details
 
 app = Flask(__name__)
 
