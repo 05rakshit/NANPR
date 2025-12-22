@@ -18,7 +18,7 @@ def get_owner_details(number_plate):
     cnx = connect_to_database()
     if cnx:
         cursor = cnx.cursor()
-        cursor.execute("SELECT owner_name, phone_number, address FROM vehicle_owner WHERE number_plate = %s", (number_plate,))
+        cursor.execute("SELECT owner_name, phone_number, Address FROM vehicle_owner WHERE number_plate = %s", (number_plate,))
         owner_info = cursor.fetchone()
         cursor.close()
         cnx.close()
