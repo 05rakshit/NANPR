@@ -6,7 +6,7 @@ def connect_to_database():
         cnx = connection.MySQLConnection(
             host = "05rakshitgarg.mysql.pythonanywhere-services.com",
             user = "05rakshitgarg",
-            password = "",
+            password = "Shivaay@",
             database = "05rakshitgarg$owner_details"
         )
         return cnx
@@ -18,7 +18,7 @@ def get_owner_details(number_plate):
     cnx = connect_to_database()
     if cnx:
         cursor = cnx.cursor()
-        cursor.execute("SELECT owner_name, phone_number, address FROM vehicle_owner WHERE number_plate = %s", (number_plate.upper(),))
+        cursor.execute("SELECT owner_name, phone_number, address FROM vehicle_owner WHERE number_plate = %s", (number_plate,))
         owner_info = cursor.fetchone()
         cursor.close()
         cnx.close()
