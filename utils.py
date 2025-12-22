@@ -4,9 +4,9 @@ from mysql.connector import connection
 def connect_to_database():
     try:
         cnx = connection.MySQLConnection(
-            host = "05rakshitgarg.mysql.pythonanywhere-services.com"
-            user = "05rakshitgarg"
-            password = ""
+            host = "05rakshitgarg.mysql.pythonanywhere-services.com",
+            user = "05rakshitgarg",
+            password = "",
             database = "05rakshitgarg$owner_details"
         )
         return cnx
