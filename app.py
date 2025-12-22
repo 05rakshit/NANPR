@@ -31,4 +31,4 @@ def check_number():
 
 @app.route("/db-test")
 def db_test():
-    return str(get_owner_details("PUT_REAL_NUMBER_HERE"))
+    return str(get_owner_details("DL9CAT0789"))
