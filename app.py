@@ -19,9 +19,9 @@ def check_number():
     if owner:
         return jsonify({
             "number_plate": number,
-            "owner": owner[0],
-            "phone_number": owner[1],
-            "address": owner[2]
+            "owner": owner["owner_name"],
+            "phone_number": owner["phone_number"],
+            "address": owner["Address"]
         })
     else:
         return jsonify({
