@@ -6,7 +6,7 @@ def connect_to_database():
         cnx = connection.MySQLConnection(
             host = "05rakshitgarg.mysql.pythonanywhere-services.com",
             user = "05rakshitgarg",
-            password = "Shivaay@",
+            password = "shivaay@",
             database = "05rakshitgarg$owner_details"
         )
         return cnx
