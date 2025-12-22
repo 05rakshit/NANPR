@@ -28,7 +28,3 @@ def check_number():
             'number_plate': number,
             "message": "No owner found in DB"
         })
-
-@app.route("/db-test")
-def db_test():
-    return str(get_owner_details("DL9CAT0789"))
