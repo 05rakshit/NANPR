@@ -19,17 +19,12 @@ def check_number():
     if owner:
         return jsonify({
             "number_plate": number,
-            "owner": owner["owner_name"],
-            "phone_number": owner["phone_number"],
-            "address": owner["Address"]
+            "owner": owner[0],
+            "phone_number": owner[1],
+            "address": owner[2]
         })
     else:
         return jsonify({
             'number_plate': number,
             "message": "No owner found in DB"
         })
-
-@app.route("/db-test")
-def db_test():
-    owner = get_owner_details("DL9CAT0789")
-    return str(owner)
