@@ -1,17 +1,13 @@
 import mysql.connector
 from mysql.connector import connection
 
-# Initialize EasyOCR once (faster performance)
-# reader = easyocr.Reader(['en'], gpu=False)
-
 def connect_to_database():
     try:
         cnx = connection.MySQLConnection(
-            user='root', 
-            password='QHdpjQYeAqWdLwnuIQPcwPwrHBcCwJFY', 
-            host='mainline.proxy.rlwy.net', 
-            database='railway', 
-            port='55270'
+            host = "05rakshitgarg.mysql.pythonanywhere-services.com"
+            user = "05rakshitgarg"
+            password = ""
+            database = "05rakshitgarg$owner_details"
         )
         return cnx
     except mysql.connector.Error as err:
