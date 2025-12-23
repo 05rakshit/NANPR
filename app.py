@@ -21,10 +21,10 @@ def check_number():
             "number_plate": number,
             "owner": owner[0],
             "phone_number": owner[1],
-            "address": owner[2]
-        })
+            "House_Number": owner[2],
+            "Floor": owner[3]
+        }), 200
     else:
         return jsonify({
-            'number_plate': number,
-            "message": "No owner found in DB"
-        })
+            "error": "No owner found in DB"
+        }), 404
